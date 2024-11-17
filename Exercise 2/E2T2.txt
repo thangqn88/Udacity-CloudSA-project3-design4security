@@ -1,0 +1,21 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+[EC2] Security groups should only allow unrestricted incoming traffic for authorized ports
+[EC2] VPC default security groups should not allow inbound or outbound traffic
+[EC2] EC2 instances should not have a public IPv4 address
+[EC2] EC2 subnets should not automatically assign public IP addresses
+[S3] S3 general purpose buckets should require requests to use SSL
+[EC2] Amazon EC2 should be configured to use VPC endpoints that are created for the Amazon EC2 service
+[ELB] Application Load Balancer should be configured to redirect all HTTP requests to HTTPS
+[ELB] Application load balancer should be configured to drop invalid http headers
+[S3] S3 general purpose buckets should have block public access settings enabled
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+- Edit the EC2 Security Group to remove access from the internet
+- Edit the Web-App Security Group to remove access from the internet
+- Disable password authentication over SSH on EC2 instances and enable support for key-based authentication instead.
+- Remove access to all the mentioned ports reachable from the internet
+- Ensure the default security group of every VPC restricts all traffic by default
+- Enable access logging on S3 buckets
+- Enable encryption on EBS volumes & ensure encryption by default
+- Enable HTTP to HTTPS redirection on ALB
+- Enable SSE on S3 buckets

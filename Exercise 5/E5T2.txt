@@ -1,0 +1,27 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+- Terrascan https://github.com/accurics/terrascan
+- CFRipper: https://github.com/Skyscanner/cfripper
+
+### Example vulnerability
+- terrascan : Ingress open to 0.0.0.0/0
+- Server Side Encryption (SSE) not enabled
+- Access logs not enabled to resources that support it
+
+##Scan AMI’s or containers for OS vulnerabilities
+- AWS Inspector
+- Grype: https://github.com/anchore/grype
+- Trivy: https://github.com/aquasecurity/trivy
+
+### Example vulnerability
+- NIST: https://nvd.nist.gov/
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+- AWS Config
+- AWStealth: https://github.com/cyberark/SkyArk/tree/master/AWStealth
+
+### Example vulnerability
+- s3-bucket-server-side-encryption-enabled: Checks that your Amazon S3 bucket either has S3 default encryption enabled or that the S3 bucket policy explicitly denies put-object requests without server side encryption.
+- Unsecured privileged users - no MFA and no constrained permission condition 
+- Disk storage has been provisioned without volume encryption enabled.
